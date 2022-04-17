@@ -1,0 +1,49 @@
+--- Tabelas
+
+Criando tabelas:
+    CREATE TABLE nomeDaTabela (
+        //campos da tabel
+        //ex:
+            id int,
+	        name varchar(100),
+            brithday date,
+            life boolean
+    );
+
+Deletando tabela:
+    DROP TABLE nomeDaTabela;
+
+
+
+--- Manipulando Tabelas
+
+Inserir registro(tabela):
+    INSERT INTO nomeDaTabela(coluna1,coluna2) VALUES(valor1,valor2);
+
+Atualizar registro:
+    UPDATE nomeDaTabela SET coluna1 = valor1, coluna2 = valor2...
+    WHERE condição;
+
+Remover registros:
+    DELETE FROM nomeDaTabela WHERE condição;
+
+Consultar registro:
+    SELECT coluna1, coluna2, coluna3 FROM nomeDaTabela;
+
+
+
+---- Chaves primarias
+-- é o id lá menor, serve pra nn duplicar indexação
+
+Criar chave:
+    ALTER TABLE nomeDaTabela
+    ADD CONSTRAINT nomeDaTabela_pk PRIMARY KEY(id);
+
+Remover chave:
+    ALTER TABLE nomeDaTabela
+    DROP CONSTRAINT nomeDaTabela_pk;
+
+
+--- Chave estrangeira
+
+    ALTER TABLE nomeDaTabela1 add constraint nomeDaTabela1_nomeDaTabela2_id_fk foreign key(nomeDaTabela2_id);

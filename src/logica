@@ -1,0 +1,24 @@
+Gerente:
+    ver funcionário
+    ver ordens de seviço
+    ver clientes
+
+Recepcionista:
+    Cadastrar clientes
+    Cadastrar ordem de serviço
+    Ver orçamentos
+
+Mecanico:
+    Cadastrar orçamento
+    Ver ordens de serviço
+    Ver seus orçamentos
+
+
+Tabelas:
+    Funcionarios(id, nome, cpf, senha, cargo)
+        
+    Clientes(id, nome, cpf, email, telefone, endereço, placa)
+
+    Ordens de serviço(id, placa_cliente, problema)
+
+    Orçamento(id, placa_cliente, valor, id_mecanico, andamento)
