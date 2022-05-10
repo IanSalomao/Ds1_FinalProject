@@ -14,7 +14,7 @@ public class ConexaoSQlite {
             String url = "jdbc:sqlite:src/Banco_de_dados/banco_sqlite.db";
             this.conexao = DriverManager.getConnection(url);
             
-            System.out.println("Conectou");         
+            System.out.println("* Conectou ao database *");         
             return true;
                        
         } catch(SQLException e) {
@@ -34,7 +34,7 @@ public class ConexaoSQlite {
             System.out.println("\n" + e.getMessage());
             return false;
         }
-        System.out.println("Desconectou");
+        System.out.println("** Desconectou do database **");
         return true;
     }
 	

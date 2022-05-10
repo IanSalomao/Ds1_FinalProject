@@ -80,7 +80,7 @@ public class Mecanico extends Funcionario{
 	}
 	
 	//Adciona orçamento
-    public void addOrcamento(ConexaoSQlite con, Orcamento orcamento, int ordenId){
+    public void addOrcamento(ConexaoSQlite con, Orcamento orcamento, String idOrdem){
        
     	String sql = "INSERT INTO orcamentos VALUES(NULL,'"
     			+orcamento.placa_cliente+"','"
@@ -98,7 +98,7 @@ public class Mecanico extends Funcionario{
 			e.printStackTrace();
 		}
 		
-		String sql0 = "DELETE FROMf ordens_de_servico WHERE id = "+ordenId+";";
+		String sql0 = "DELETE FROMf ordens_de_servico WHERE id = "+idOrdem;
 
     	PreparedStatement preparedStatement0 = con.criarPreparedStatement(sql0);
 		try {

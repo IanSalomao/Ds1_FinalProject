@@ -21,4 +21,4 @@ Tabelas:
 
     Ordens de serviço(id, placa_cliente, problema)
 
-    Orçamento(id, placa_cliente, valor, id_mecanico, andamento)
+    Orçamento(id, placa_cliente, valor, id_mecanico, andamento, pagamento)
